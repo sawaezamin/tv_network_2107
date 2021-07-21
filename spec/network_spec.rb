@@ -4,12 +4,12 @@ require './lib/character'
 
 RSpec.describe Network do
   describe 'attributes' do
-    xit 'exists' do
+    it 'exists' do
       nbc = Network.new("NBC")
       expect(nbc).to be_a(Network)
     end
 
-    xit 'has a name and no shows by default' do
+    it 'has a name and no shows by default' do
       nbc = Network.new("NBC")
       expect(nbc.name).to eq("NBC")
       expect(nbc.shows).to eq([])
@@ -29,14 +29,14 @@ RSpec.describe Network do
       @parks_and_rec = Show.new("Parks and Recreation", "Michael Shur & Greg Daniels", [@leslie_knope, @ron_swanson])
     end
 
-    xit 'can add a show into a network' do
+    it 'can add a show into a network' do
       @nbc.add_show(@knight_rider)
       @nbc.add_show(@parks_and_rec)
 
       expect(@nbc.shows).to eq([@knight_rider, @parks_and_rec])
     end
 
-    xit 'can find the main characters in the network' do
+    it 'can find the main characters in the network' do
       @nbc.add_show(@knight_rider)
       @nbc.add_show(@parks_and_rec)
 
