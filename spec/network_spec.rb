@@ -36,7 +36,7 @@ RSpec.describe Network do
       expect(@nbc.shows).to eq([@knight_rider, @parks_and_rec])
     end
 
-    it 'can find the main characters in the network' do
+    xit 'can find the main characters in the network' do
       @nbc.add_show(@knight_rider)
       @nbc.add_show(@parks_and_rec)
 

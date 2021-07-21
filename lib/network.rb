@@ -11,6 +11,10 @@ class Network
   end
 
   def main_characters
-    
+
+  end
+
+  def actors_by_show
+
   end
 end
