@@ -18,15 +18,15 @@ RSpec.describe Show do
     expect(@knight_rider.characters).to eq([@michael_knight, @kitt])
   end
 
-  xit 'has a total salary of actors' do
+  it 'has a total salary of actors' do
     expect(@knight_rider.total_salary).to eq(2_600_000)
   end
 
-  xit 'shows who the highest paid actor' do
+  it 'shows who the highest paid actor' do
     expect(@knight_rider.highest_paid_actor).to eq(@michael_knight.actor)
   end
 
-  xit 'gives the name of actors in the show' do
+  it 'gives the name of actors in the show' do
     expect(@knight_rider.actors).to eq(["David Hasselhoff", "William Daniels"])
   end
 end
