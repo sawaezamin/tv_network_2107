@@ -10,11 +10,14 @@ class Show
   end
 
   def total_salary
-    total_count_salary = 0
-    @characters.each do |character|
-      total_count_salary += character.salary
+    @characters.sum do |character|
+       character.salary
     end
-    total_count_salary
+    # total_count_salary = 0
+    # @characters.each do |character|
+    #   total_count_salary += character.salary
+    # end
+    # total_count_salary
   end
 
   def highest_paid_actor
@@ -25,10 +28,13 @@ class Show
   end
 
   def actors
-    actors = []
-    @characters.each do |character|
-      actors << character.actor
-    end
-    actors
+    @characters.map do |character|
+      character.actor
+    end 
+    # actors = []
+    # @characters.each do |character|
+    #   actors << character.actor
+    # end
+    # actors
   end
 end

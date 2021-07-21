@@ -1,7 +1,9 @@
 require './lib/character'
 
 RSpec.describe Character do
+  
   it 'exists' do
+
     kitt = Character.new({
       name: "KITT",
       actor: "William Daniels",
@@ -11,6 +13,7 @@ RSpec.describe Character do
   end
 
   it 'has attributes' do
+
     kitt = Character.new({
       name: "KITT",
       actor: "William Daniels",
